@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -695,49 +697,62 @@
 <h1 id="_1">练习</h1>
 <h2 id="q1">Q1</h2>
 <p>尝试运行 <code>echo $SHELL</code> ，若显示类似 <code>/bin/bash</code> 或者 <code>/usr/bin/zsh</code> 的命令，说明当前你在正确的 shell 下，否则，你的 shell 并不满足课程的要求</p>
-<pre><code class="language-zsh">southernwood@x1-carbon:~$ echo $SHELL
-/bin/bash
-</code></pre>
+<div class="language-zsh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>southernwood@x1-carbon:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$SHELL</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>/bin/bash
+</span></code></pre></div></td></tr></table></div>
 <h2 id="q2">Q2</h2>
 <p>在 <code>/tmp</code> 文件夹下创建一个名为 <code>missing</code> 的目录</p>
-<pre><code class="language-sh">southernwood@x1-carbon:~$ mkdir /tmp/missing
-southernwood@x1-carbon:~$ ls -l /tmp | grep missing
-drwxrwxr-x 2 southernwood southernwood 4096 10月 21 18:31 missing
-
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>southernwood@x1-carbon:~$<span class="w"> </span>mkdir<span class="w"> </span>/tmp/missing
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>southernwood@x1-carbon:~$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span>/tmp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>missing
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>southernwood<span class="w"> </span>southernwood<span class="w"> </span><span class="m">4096</span><span class="w"> </span>10月<span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="m">18</span>:31<span class="w"> </span>missing
+</span></code></pre></div></td></tr></table></div>
 <h2 id="q3">Q3：</h2>
 <p>查阅 <code>touch</code> 的使用方法</p>
-<pre><code class="language-sh">southernwood@x1-carbon:~$ man touch
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>southernwood@x1-carbon:~$<span class="w"> </span>man<span class="w"> </span>touch
+</span></code></pre></div></td></tr></table></div>
 <h2 id="q4">Q4：</h2>
 <p>使用 <code>touch</code> 在 <code>missing</code> 文件夹下新建 <code>semester</code> 文件</p>
-<pre><code class="language-sh">southernwood@x1-carbon:~$ ls -l /tmp/missing
-总用量 0
--rw-rw-r-- 1 southernwood southernwood 0 10月 21 18:37 semester
-
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>southernwood@x1-carbon:~$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span>/tmp/missing
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>总用量<span class="w"> </span><span class="m">0</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>southernwood<span class="w"> </span>southernwood<span class="w"> </span><span class="m">0</span><span class="w"> </span>10月<span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="m">18</span>:37<span class="w"> </span>semester
+</span></code></pre></div></td></tr></table></div>
 <h2 id="q5">Q5</h2>
 <p>在 <code>semester</code> 中写入下面两行文本</p>
-<pre><code class="language-sh">#!/bin/sh
-curl --head --silent https://missing.csail.mit.edu
-</code></pre>
-<pre><code class="language-sh">southernwood@x1-carbon:~$ cd /tmp/missing
-southernwood@x1-carbon:/tmp/missing$ cat semester
-southernwood@x1-carbon:/tmp/missing$ echo '#!bin/sh' &gt; semester
-southernwood@x1-carbon:/tmp/missing$ echo 'curl --head --silent https://missing.csail.mit.edu' &gt;&gt; semester
-southernwood@x1-carbon:/tmp/missing$ cat semester
-#!bin/sh
-curl --head --silent https://missing.csail.mit.edu
-
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="ch">#!/bin/sh</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>curl<span class="w"> </span>--head<span class="w"> </span>--silent<span class="w"> </span>https://missing.csail.mit.edu
+</span></code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>southernwood@x1-carbon:~$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/tmp/missing
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>cat<span class="w"> </span>semester
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;#!bin/sh&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>semester
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;curl --head --silent https://missing.csail.mit.edu&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>semester
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>cat<span class="w"> </span>semester
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="c1">#!bin/sh</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>curl<span class="w"> </span>--head<span class="w"> </span>--silent<span class="w"> </span>https://missing.csail.mit.edu
+</span></code></pre></div></td></tr></table></div>
 <h2 id="q6">Q6</h2>
 <p>尝试执行该文件，并试着理解为什么无法执行。</p>
-<pre><code class="language-sh">southernwood@x1-carbon:/tmp/missing$ ./semester
-bash: ./semester: 权限不够
-southernwood@x1-carbon:/tmp/missing$ ls -l
-总用量 4
--rw-rw-r-- 1 southernwood southernwood 60 10月 21 18:46 semester
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>./semester
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>bash:<span class="w"> </span>./semester:<span class="w"> </span>权限不够
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>ls<span class="w"> </span>-l
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>总用量<span class="w"> </span><span class="m">4</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a>-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>southernwood<span class="w"> </span>southernwood<span class="w"> </span><span class="m">60</span><span class="w"> </span>10月<span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="m">18</span>:46<span class="w"> </span>semester
+</span></code></pre></div></td></tr></table></div>
 <h3 id="linux">Linux 权限信息</h3>
 <h4 id="_2">文件权限</h4>
 <p>权限信息由九个字符表示，将每三个分为一组，三组分别表示：
@@ -764,80 +779,113 @@ southernwood@x1-carbon:/tmp/missing$ ls -l
 <p>同时，对目录执行 <code>ls -l</code> 也需要执行权限，因为提供更详细的信息需要进入该目录。当然，也需要其所有父目录的权限。</p>
 <h2 id="q7">Q7</h2>
 <p>使用<code>sh semester</code>重新运行程序，并试着理解这为什么有效</p>
-<pre><code class="language-sh">southernwood@x1-carbon:/tmp/missing$ sh semester
-HTTP/1.1 200 Connection established
-...
-
-southernwood@x1-carbon:/tmp/missing$ which sh
-/usr/bin/sh
-southernwood@x1-carbon:/tmp/missing$ ls -l /usr/bin/sh
-lrwxrwxrwx 1 root root 4 10月 19 13:38 /usr/bin/sh -&gt; dash
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>sh<span class="w"> </span>semester
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>HTTP/1.1<span class="w"> </span><span class="m">200</span><span class="w"> </span>Connection<span class="w"> </span>established
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>...
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>which<span class="w"> </span>sh
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>/usr/bin/sh
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span>/usr/bin/sh
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a>lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">4</span><span class="w"> </span>10月<span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="m">13</span>:38<span class="w"> </span>/usr/bin/sh<span class="w"> </span>-&gt;<span class="w"> </span>dash
+</span></code></pre></div></td></tr></table></div>
 <p>我们拥有 <code>sh</code> 的执行权限，以及 <code>semester</code>的读取权限，因此事实上我们调用了<code>sh</code>权限，并读取了<code>semester</code>中的内容，要求<code>sh</code>执行其中的命令。</p>
 <p>可以借助以下办法验证这个猜想：</p>
-<pre><code class="language-sh">southernwood@x1-carbon:/tmp/missing$ ls -l
-总用量 4
--rw-rw-r-- 1 southernwood southernwood 60 10月 21 18:46 semester
-southernwood@x1-carbon:/tmp/missing$ chmod 444 semester
-southernwood@x1-carbon:/tmp/missing$ ls -l
-总用量 4
--r--r--r-- 1 southernwood southernwood 60 10月 21 18:46 semester
-southernwood@x1-carbon:/tmp/missing$ sh semester
-HTTP/1.1 200 Connection established
-...
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>ls<span class="w"> </span>-l
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>总用量<span class="w"> </span><span class="m">4</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>southernwood<span class="w"> </span>southernwood<span class="w"> </span><span class="m">60</span><span class="w"> </span>10月<span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="m">18</span>:46<span class="w"> </span>semester
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>chmod<span class="w"> </span><span class="m">444</span><span class="w"> </span>semester
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>ls<span class="w"> </span>-l
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a>总用量<span class="w"> </span><span class="m">4</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a>-r--r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>southernwood<span class="w"> </span>southernwood<span class="w"> </span><span class="m">60</span><span class="w"> </span>10月<span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="m">18</span>:46<span class="w"> </span>semester
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>sh<span class="w"> </span>semester
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a>HTTP/1.1<span class="w"> </span><span class="m">200</span><span class="w"> </span>Connection<span class="w"> </span>established
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a>...
+</span></code></pre></div></td></tr></table></div>
 <p>可以看到，我们修改了<code>semester</code>的权限，使其只能被读取，然而<code>sh semester</code>可以正确运行。</p>
-<pre><code class="language-sh">southernwood@x1-carbon:/tmp/missing$ chmod 333 semester
-southernwood@x1-carbon:/tmp/missing$ ls -l
-总用量 4
---wx-wx-wx 1 southernwood southernwood 60 10月 21 18:46 semester
-southernwood@x1-carbon:/tmp/missing$ sh semester
-sh: 0: cannot open semester: Permission denied
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>chmod<span class="w"> </span><span class="m">333</span><span class="w"> </span>semester
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>ls<span class="w"> </span>-l
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a>总用量<span class="w"> </span><span class="m">4</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a>--wx-wx-wx<span class="w"> </span><span class="m">1</span><span class="w"> </span>southernwood<span class="w"> </span>southernwood<span class="w"> </span><span class="m">60</span><span class="w"> </span>10月<span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="m">18</span>:46<span class="w"> </span>semester
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>sh<span class="w"> </span>semester
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a>sh:<span class="w"> </span><span class="m">0</span>:<span class="w"> </span>cannot<span class="w"> </span>open<span class="w"> </span>semester:<span class="w"> </span>Permission<span class="w"> </span>denied
+</span></code></pre></div></td></tr></table></div>
 <p>而当我们修改权限为可写、可执行、不可读时，<code>sh semester</code>将不能运行。</p>
 <h2 id="q8">Q8</h2>
 <p>查阅 <code>chomd</code>程序</p>
-<pre><code class="language-sh">southernwood@x1-carbon:/tmp/missing$ man chmod
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>man<span class="w"> </span>chmod
+</span></code></pre></div></td></tr></table></div>
 <h2 id="q9">Q9</h2>
 <p>使用<code>chmod</code>修改文件权限，让<code>./semester</code>可以运行，并查阅相关资料理解 shell 是如何知道应该用 <code>sh</code>执行<code>semester</code>的</p>
 <p>文件权限事实上使用一个三位的二进制数表示，因此，二进制下的<code>111</code>等同于权限<code>rwx</code>，而<code>010</code>等同于权限<code>-w-</code>，理解这一点之后可以很方便的设置文件权限，只需要使用一个八进制数就可以设置一个文件的权限，例如：</p>
-<pre><code class="language-sh">southernwood@x1-carbon:/tmp/missing$ chmod 764 semester
-southernwood@x1-carbon:/tmp/missing$ ls -l
-总用量 4
--rwxrw-r-- 1 southernwood southernwood 60 10月 21 18:46 semester
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>chmod<span class="w"> </span><span class="m">764</span><span class="w"> </span>semester
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>ls<span class="w"> </span>-l
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a>总用量<span class="w"> </span><span class="m">4</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a>-rwxrw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>southernwood<span class="w"> </span>southernwood<span class="w"> </span><span class="m">60</span><span class="w"> </span>10月<span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="m">18</span>:46<span class="w"> </span>semester
+</span></code></pre></div></td></tr></table></div>
 <p>这里 <code>7</code>就是二进制下的<code>111</code>，对应<code>rwx</code>，<code>6</code>对应<code>110</code>和<code>rw-</code>，<code>1</code>对应<code>001</code>和<code>r--</code>，这与<code>ls -l</code>得到的结果一致。</p>
 <p>在修改权限后，<code>./semester</code> 可正确运行。</p>
 <p>这里有个小插曲，事实上，在修改后，<code>./semester</code> 在我的计算机上仍不能正确运行（我使用的操作系统是 Ubuntu 22.10 ），但这是因为 Ubuntu 将 <code>sh</code> 放在了 <code>/usr/bin/sh</code> 而不是 <code>bin/sh</code>，使用文本编辑器将第一行修改后，可以正确运行。</p>
 <p>修改前：</p>
-<pre><code class="language-sh">southernwood@x1-carbon:/tmp/missing$ ./semester
-bash: ./semester: bin/sh: 错误的解释器: 没有那个文件或目录
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>./semester
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a>bash:<span class="w"> </span>./semester:<span class="w"> </span>bin/sh:<span class="w"> </span>错误的解释器:<span class="w"> </span>没有那个文件或目录
+</span></code></pre></div></td></tr></table></div>
 <p>修改后：</p>
-<pre><code class="language-sh">southernwood@x1-carbon:/tmp/missing$ cat semester
-#!/usr/bin/sh
-curl --head --silent https://missing.csail.mit.edu
-southernwood@x1-carbon:/tmp/missing$ ./semester
-HTTP/1.1 200 Connection established
-...
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>cat<span class="w"> </span>semester
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="c1">#!/usr/bin/sh</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a>curl<span class="w"> </span>--head<span class="w"> </span>--silent<span class="w"> </span>https://missing.csail.mit.edu
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>./semester
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5"></a>HTTP/1.1<span class="w"> </span><span class="m">200</span><span class="w"> </span>Connection<span class="w"> </span>established
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6"></a>...
+</span></code></pre></div></td></tr></table></div>
 <p>有了这个小插曲，shell 如何找到该命令已经真相大白了。</p>
 <p>在脚本开头的，一行以<code>#!</code>开头的语句被称为 <strong>shebang</strong>，在类 Unix 系统上，程序解释器将解析<code>#!</code>后面的内容，并将其作为执行脚本的程序。这就是为什么修改它之前，上面的脚本在我的机器上无法执行，因为它提供了错误的程序路径。</p>
 <p>在许多脚本语言中，从<code>#</code>开始到该行结束的内容属于注释，并不会被执行，其他不以<code>#</code>为注释记号的语言也大多会自动忽略<code>#!</code>来兼容 shebang.</p>
 <h2 id="q10">Q10</h2>
 <p>使用<code>|</code> 和 <code>&gt;</code> 将 <code>semester</code> 返回的文件中的 <code>last-modified</code> 日期输出到一个文件中，这个文件的文件名为 <code>last-modified.txt</code> ，并位于当前用户的主目录下</p>
-<pre><code class="language-sh">southernwood@x1-carbon:/tmp/missing$ ./semester | grep last-modified &gt; ~/last-modified.txt
-southernwood@x1-carbon:/tmp/missing$ cat ~/last-modified.txt
-last-modified: Sat, 14 Oct 2023 12:37:10 GMT
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>./semester<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>last-modified<span class="w"> </span>&gt;<span class="w"> </span>~/last-modified.txt
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a>southernwood@x1-carbon:/tmp/missing$<span class="w"> </span>cat<span class="w"> </span>~/last-modified.txt
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a>last-modified:<span class="w"> </span>Sat,<span class="w"> </span><span class="m">14</span><span class="w"> </span>Oct<span class="w"> </span><span class="m">2023</span><span class="w"> </span><span class="m">12</span>:37:10<span class="w"> </span>GMT
+</span></code></pre></div></td></tr></table></div>
 <h2 id="q11">Q11</h2>
 <p>使用一条命令从 <code>/sys</code>中获取笔记本电脑当前的电量</p>
 <p>经过查阅资料，了解到当前电量存储在 <code>/sys/class/power_supply/BAT0/capacity</code></p>
 <p>因此，下面这个命令就可以完成任务：</p>
-<pre><code class="language-sh">southernwood@x1-carbon:~$ cat /sys/class/power_supply/BAT0/capacity
-99
-</code></pre>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>southernwood@x1-carbon:~$<span class="w"> </span>cat<span class="w"> </span>/sys/class/power_supply/BAT0/capacity
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="m">99</span>
+</span></code></pre></div></td></tr></table></div>
 
 
 
@@ -884,7 +932,7 @@ last-modified: Sat, 14 Oct 2023 12:37:10 GMT
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.indexes", "navigation.top", "toc.follow", "search", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.indexes", "navigation.top", "toc.follow", "search", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
