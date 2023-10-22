@@ -1,4 +1,4 @@
-.highlight .sb {
+.highlight :is(.ge, .gr, .gh, .go, .gp, .gs, .gu, .gt) {
     color: #0FF1CE;
   }
   
