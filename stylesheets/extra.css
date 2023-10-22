@@ -1,4 +1,11 @@
-.highlight :is(.ge, .gr, .gh, .go, .gp, .gs, .gu, .gt) {
-    color: #0FF1CE;
-  }
-  
+:root > * {
+  --md-code-hl-string-color: #0FF1CE;
+  --md-code-hl-generic-color: #449429;
+  --md-code-hl-punctuation-color:var(--md-code-hl-name-color);
+}
+
+:root > * {
+  --md-code-hl-name-color:  #769d14;
+  --md-code-hl-variable-color:var(--md-code-hl-generic-color);
+}
+
